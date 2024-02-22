@@ -171,7 +171,7 @@ static void task4()
         for (int j = 0; j < a[i].Length; j++)
         {   
             if (a[i][j] > 0) {
-                result[i] += a[i][j];
+                result[i] += 1;
             }
         }
     }
