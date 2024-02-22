@@ -144,8 +144,10 @@ static void task4()
 
     for (int i = 0; i < n; i++)
     {   
-        a[i] = new int[i+1];
-        for (int j = 0; j < i + 1; ++j)
+        Console.WriteLine("Enter m");
+        int m = int.Parse(Console.ReadLine());
+        a[i] = new int[m];
+        for (int j = 0; j < m; ++j)
         {
             Console.Write("a[{0},{1}]= ", i, j);
             a[i][j] = int.Parse(Console.ReadLine());
@@ -155,7 +157,7 @@ static void task4()
     for (int i = 0; i < n; i++)
     {
         Console.WriteLine("");
-        for (int j = 0; j < i + 1; j++)
+        for (int j = 0; j < a[i].Length; j++)
         {
             Console.Write("{0,1} ", a[i][j]);
         }
@@ -164,8 +166,9 @@ static void task4()
     int[] result = new int[n];
     Console.WriteLine("");
     for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < i + 1; j++)
+    {   
+
+        for (int j = 0; j < a[i].Length; j++)
         {   
             if (a[i][j] > 0) {
                 result[i] += a[i][j];
